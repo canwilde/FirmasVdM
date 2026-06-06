@@ -1,0 +1,275 @@
+/* Estilo Base del Post */
+.louise-post {
+    width: 500px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to bottom right, var(--gg6), #1e3a8a) 1;
+    border-image-slice: 1;
+    padding: 45px 30px 30px 30px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    position: relative;
+    margin-top: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Rombos Superiores de Información */
+.louise-info-container {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.louise-info-hex {
+    position: relative;
+    cursor: help;
+}
+
+.louise-hex-icon {
+    width: 40px;
+    height: 40px;
+    background: #0f172a;
+    border: 1px solid var(--gg6);
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+.louise-hex-icon i {
+    transform: rotate(-45deg);
+    color: var(--gg6);
+    font-size: 18px;
+}
+
+.louise-tooltip {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e3a8a;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    border: 1px solid var(--gg6);
+    font-family: 'Courier New';
+    text-transform: uppercase;
+}
+
+.louise-info-hex:hover .louise-tooltip {
+    opacity: 1;
+    bottom: 60px;
+}
+
+.louise-info-hex:hover .louise-hex-icon {
+    background: #1e3a8a;
+    box-shadow: 0 0 15px var(--gg6);
+}
+
+/* Cabecera del Título: Fondo degradado independiente */
+.louise-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Necesario para el fondo independiente */
+    padding: 10px 20px;
+    margin: 15px 0 25px 0;
+    border-left: 3px solid var(--gg6);
+    overflow: hidden;
+}
+
+.louise-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Degradado de la variable a transparente */
+    background: linear-gradient(to right, var(--gg6), transparent);
+    opacity: 0.35; /* Aquí controlas qué tan marcado es el degradado */
+    z-index: 1;
+}
+
+.louise-title {
+    position: relative;
+    z-index: 2; /* Por encima del degradado */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 34px;
+    letter-spacing: 1px;
+    line-height: 0.85;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--gg6);
+    text-align: left;
+}
+
+.louise-title-hex {
+    position: relative;
+    z-index: 2; /* Por encima del degradado */
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom right, #1e3a8a, #0f172a);
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--gg6);
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.louise-title-hex i {
+    font-size: 40px;
+    color: #e0f2fe;
+    transform: rotate(-45deg);
+}
+
+/* Cuerpo y Firma */
+.louise-body {
+    text-align: justify;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.louise-footer {
+    margin-top: 35px;
+    border-top: 1px solid #1e3a8a;
+    padding-top: 8px;
+    text-align: right;
+}
+
+.louise-footer a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 9px;
+    color: #1e3a8a;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* Estilos para Cronología */
+.louise-crono-section {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: var(--gg6);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(var(--gg6-rgb), 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.louise-crono-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background: rgba(var(--gg6-rgb), 0.05);
+    border-left: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.louise-crono-item:hover {
+    background: rgba(var(--gg6-rgb), 0.1);
+    border-left: 2px solid var(--gg6);
+}
+
+.louise-crono-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--gg6);
+    font-size: 13px;
+    flex-grow: 1;
+}
+
+.louise-crono-info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    color: #1e3a8a;
+    text-align: right;
+}
+/* =========================================
+   ESTILOS CORREGIDOS PARA RELACIONES (CLIP-PATH)
+   ========================================= */
+.louise-rel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado más compacto */
+    margin-top: 10px;
+}
+
+.louise-rel-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+    /* Aseguramos que nada se corte fuera del item */
+    overflow: visible; 
+}
+
+.louise-rel-img {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 2px solid var(--gg6);
+    /* LA SOLUCIÓN: Máscara geométrica perfecta */
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+    flex-shrink: 0;
+    margin: 5px; /* Margen sutil */
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.louise-rel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.louise-rel-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.louise-rel-name {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gg6);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    filter: brightness(1.1);
+}
+
+.louise-rel-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #444; /* Texto de descripción nítido */
+}
