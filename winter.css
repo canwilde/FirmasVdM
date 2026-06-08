@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.winter-post-container {
+  width: 500px;
+  margin: 20px auto;
+  background: rgba(23, 24, 33, .96);
+  border: 1px solid rgba(255, 255, 255, .05);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.winter-post-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, transparent 10%, transparent 90%, rgba(0,0,0,0.2) 100%);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.winter-post-header {
+  display: flex;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(33,19,30,1) 0%, rgba(113,63,72,0.85) 50%, rgba(255,204,213,0.15) 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.winter-post-image {
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  left: 0; top: 0; z-index: 5;
+  overflow: hidden;
+  border-radius: 0 120px 120px 0;
+  transform: translate3d(0,0,0);
+  transition: transform .95s cubic-bezier(.4,0,.2,1), border-radius .95s cubic-bezier(.4,0,.2,1);
+}
+
+.winter-post-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.winter-post-info {
+  width: 340px; height: 200px;
+  position: absolute;
+  right: 0; top: 0; z-index: 5;
+  box-sizing: border-box;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate3d(0,0,0);
+  transition: transform .95s cubic-bezier(.4,0,.2,1);
+}
+
+.winter-post-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: lowercase;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.winter-post-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.winter-post-item {
+  font-size: 9px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: rgba(0,0,0,0.25);
+  padding: 4px 10px;
+  border-left: 2px solid #ffccd5;
+}
+
+.winter-post-item span { color: #ffccd5; font-weight: 700; margin-right: 8px; }
+
+.winter-post-container:hover .winter-post-image {
+  transform: translate3d(340px,0,0);
+  border-radius: 120px 0 0 120px;
+}
+.winter-post-container:hover .winter-post-info { transform: translate3d(-160px,0,0); }
+
+.winter-post-body {
+  padding: 45px;
+  color: #ddd;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.winter-post-body b { color: #ffccd5; font-weight: 600; }
+
+/* Footer con Copo Grande y Link */
+.winter-post-footer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+}
+
+.winter-post-footer a {
+  color: #ffccd5;
+  font-size: 22px; /* Tamaño del copo agrandado */
+  text-decoration: none;
+  opacity: 0.4;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.winter-post-footer a:hover {
+  opacity: 1;
+  transform: scale(1.2) rotate(30deg);
+  text-shadow: 0 0 10px rgba(255,204,213,0.5);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.winter-chrono-container { width: 500px; margin: 20px auto; background: rgba(23, 24, 33, .96); border: 1px solid rgba(255, 255, 255, .05); font-family: 'Inter', sans-serif; position: relative; overflow: hidden; box-sizing: border-box; box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+.winter-chrono-header { display: flex; height: 150px; background: linear-gradient(135deg, rgba(33,19,30,1) 0%, rgba(113,63,72,0.85) 50%, rgba(255,204,213,0.15) 100%); border-bottom: 1px solid rgba(255,255,255,0.05); align-items: center; padding: 0 40px; }
+.winter-chrono-icon-box { width: 70px; height: 70px; background: rgba(0,0,0,0.3); border: 1px solid #ffccd5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 25px; box-shadow: 0 0 15px rgba(255,204,213,0.1); transition: all 0.5s ease; }
+.winter-chrono-icon-box i { font-size: 30px; color: #ffccd5; }
+.winter-chrono-container:hover .winter-chrono-icon-box { transform: rotate(360deg); background: rgba(255,204,213,0.1); box-shadow: 0 0 20px rgba(255,204,213,0.3); }
+.winter-chrono-info { display: flex; flex-direction: column; }
+.winter-chrono-title { font-size: 24px; font-weight: 700; color: #fff; text-transform: lowercase; letter-spacing: -1px; }
+.winter-chrono-subtitle { font-size: 9px; color: #ffccd5; text-transform: uppercase; letter-spacing: 2px; }
+.winter-chrono-body { padding: 30px 40px; display: flex; flex-direction: column; gap: 15px; }
+
+/* Subtítulos Abiertos/Cerrados */
+.winter-chrono-label { display: block; margin: 25px 0 10px 0; font-size: 13px; font-weight: 700; font-style: italic; text-transform: lowercase; color: #fff; position: relative; padding-left: 12px; border-left: 2px solid #713f48; }
+.winter-chrono-label::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 1px; background: linear-gradient(to right, rgba(0,0,0,1) 0%, #ffccd5 50%, rgba(0,0,0,1) 100%); opacity: 0.4; }
+.winter-chrono-label::before { content: ''; position: absolute; bottom: -7px; left: 5%; width: 90%; height: 1px; background: linear-gradient(to right, rgba(0,0,0,1) 0%, #713f48 50%, rgba(0,0,0,1) 100%); opacity: 0.6; }
+
+.winter-chrono-event { background: rgba(255,255,255,0.01); padding: 12px 15px; border-left: 2px solid rgba(113,63,72,0.4); transition: all 0.4s cubic-bezier(.4,0,.2,1); }
+.winter-chrono-event:hover { background: rgba(113,63,72,0.1); border-left: 2px solid #ffccd5; transform: translateX(8px); }
+.winter-is-closed { opacity: 0.4; filter: saturate(0.5); }
+.winter-chrono-date { font-size: 9px; color: #ffccd5; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; display: block; }
+.winter-chrono-link { display: block; font-size: 15px; font-weight: 600; color: #fff !important; text-decoration: none !important; margin-bottom: 4px; }
+.winter-chrono-link:hover { color: #ffccd5 !important; }
+.winter-chrono-with { font-size: 11px; color: rgba(255,255,255,0.4); }
+.winter-chrono-with b { color: rgba(255,255,255,0.7); font-weight: 500; }
+.winter-chrono-footer { height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); }
+.winter-chrono-footer a { color: #ffccd5; font-size: 22px; text-decoration: none; opacity: 0.4; transition: 0.4s; }
+.winter-chrono-footer a:hover { opacity: 1; transform: scale(1.2) rotate(20deg); }
