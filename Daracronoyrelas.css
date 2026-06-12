@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&family=Parisienne&display=swap');
 
 .dara-chrono-wrapper{
 width:500px;
@@ -39,19 +39,19 @@ pointer-events:none;
 }
 
 .dara-chrono-title-main{
-font-family:'Cinzel',serif;
-font-size:26px;
-letter-spacing:3px;
-text-transform:uppercase;
+font-family:'Parisienne',cursive;
+font-size:42px;
+font-weight:400;
 text-align:center;
-line-height:32px;
+line-height:100%;
+padding-bottom:5px;
 }
 
 .dara-chrono-line-main{
 width:220px;
-height:2px;
+height:1px;
 background:linear-gradient(to right,transparent,currentColor,transparent);
-opacity:.5;
+opacity:.45;
 }
 
 .dara-chrono-img{
@@ -75,7 +75,7 @@ padding:0 30px 25px;
 
 .dara-chrono-title{
 font-family:'Cinzel',serif;
-font-size:18px;
+font-size:17px;
 letter-spacing:2px;
 text-transform:uppercase;
 margin-bottom:15px;
@@ -102,7 +102,7 @@ border-color:rgba(150,150,150,.35);
 
 .dara-chrono-topic-name{
 font-family:'EB Garamond',serif;
-font-size:19px;
+font-size:20px;
 font-style:italic;
 margin-bottom:5px;
 }
