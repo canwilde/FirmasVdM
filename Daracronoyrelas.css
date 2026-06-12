@@ -11,9 +11,10 @@ background:transparent;
 
 .dara-chrono-head{
 display:flex;
-gap:25px;
-padding:30px;
+flex-direction:column;
 align-items:center;
+padding:35px 30px;
+gap:18px;
 position:relative;
 overflow:hidden;
 }
@@ -37,13 +38,28 @@ pointer-events:none;
 100%{left:150%;}
 }
 
+.dara-chrono-title-main{
+font-family:'Cinzel',serif;
+font-size:26px;
+letter-spacing:3px;
+text-transform:uppercase;
+text-align:center;
+line-height:32px;
+}
+
+.dara-chrono-line-main{
+width:220px;
+height:2px;
+background:linear-gradient(to right,transparent,currentColor,transparent);
+opacity:.5;
+}
+
 .dara-chrono-img{
-width:140px;
-height:190px;
-flex-shrink:0;
-border-radius:40px 2px 40px 2px;
+width:180px;
+height:180px;
 overflow:hidden;
-border:1px solid rgba(150,150,150,.1);
+border-radius:6px;
+border:1px solid rgba(150,150,150,.15);
 filter:grayscale(100%);
 }
 
@@ -51,42 +67,6 @@ filter:grayscale(100%);
 width:100%;
 height:100%;
 object-fit:cover;
-}
-
-.dara-chrono-info{
-flex:1;
-}
-
-.dara-chrono-name{
-font-family:'Cinzel',serif;
-font-size:24px;
-letter-spacing:2px;
-text-transform:uppercase;
-line-height:28px;
-}
-
-.dara-chrono-line{
-width:180px;
-height:2px;
-background:linear-gradient(to right,currentColor,rgba(150,150,150,.5),transparent);
-margin:12px 0 18px;
-}
-
-.dara-chrono-data{
-font-family:'Montserrat',sans-serif;
-font-size:12px;
-letter-spacing:1px;
-margin-bottom:8px;
-}
-
-.dara-chrono-data span{
-display:block;
-font-size:10px;
-text-transform:uppercase;
-letter-spacing:2px;
-font-weight:600;
-opacity:.6;
-margin-bottom:2px;
 }
 
 .dara-chrono-section{
@@ -111,8 +91,8 @@ text-decoration:none;
 color:inherit;
 border:1px solid rgba(150,150,150,.15);
 border-radius:6px;
-transition:.3s;
 background:rgba(255,255,255,.02);
+transition:.3s;
 }
 
 .dara-chrono-topic:hover{
